@@ -1,0 +1,27 @@
+version: '3.3'
+services:
+    db:
+        image: mysql:5.6
+        container_name: mysql
+        volumes:
+            - db_data:/var/lib/mysql
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: somewordpress
+            MYSQL_DATABASE: wordpress
+            MYSQL_USER: wordpress
+            MYSQL_PASSWORD: wordpress
+    wildfly:
+        image: jboss/base-jdk:11
+        container_name: wildfly
+        build: .
+        ports:
+            - "8080:8080"
+            - "8787:8787"
+            - "9990:9990"
+        volumes:
+            - $PWD/output_files/logs:/opt/jboss/wildfly/standalone/log
+            - $PWD/output_files/terawharsdata:/opt/jboss/wildfly/terawharsdata
+            - jboss-conf:/opt/jboss/wildfly/standalone/configuration
+volumes:
+    jboss-conf: {}

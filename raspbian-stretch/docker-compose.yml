@@ -1,0 +1,8 @@
+version: '3'
+services: 
+  lighttpd: 
+    image: dastrasmue/rpi-lighttpd:v2
+      volumes: 
+        - .:/var/www/localhost/htdocs
+      ports: 
+        - "8181:80"
