@@ -15,7 +15,7 @@ RUN mkdir -p /home/git/.ssh
 
 # Clearing and setting authorized ssh keys
 RUN echo '' > /home/git/.ssh/authorized_keys
-RUN echo 'ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAr+hMbZaebyKmTblcfcmrMjBtsjbU1OqY/cXG+x9fQfv9jq8HXBBi0T1CYSntYq1Tf6TIRcn+So4xsZQ10NU6TxEp6biXikGb5DkD7fSTrPfiPXyRTLFBhfPYdbnETmh3q8yvmstrkc4KP0gqO6LEbM/Ywo9gc5Rl7cuaAW51T1k1bLsQXPfIQn6e6xJVzrYVpHz3/AIP/CMo3nF7WZBfyJGVW+pZfdfZMPbf4grWNlRg4wLKVRnBXaimJAo/PplPVGO0ZUEd6hr0fdVCQvr7C5U+LqsKP8Bf5zoXmb+TDbfZc9SmemWm8p9muKoGgYHoic/B+SQ6iAh25UIj+J5+tQ== rsa-key-20190822' >> /home/git/.ssh/authorized_keys
+RUN echo 'First SSH public key' >> /home/git/.ssh/authorized_keys
 # RUN echo 'Second SSH public key' >> /home/git/.ssh/authorized_keys
 # ...
 
