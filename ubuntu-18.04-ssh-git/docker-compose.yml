@@ -1,0 +1,8 @@
+version: '3'
+services:
+  ssh:
+    build: .
+    volumes:
+      - ./drive/:/home/git/repo/
+    ports:
+      - "1234:22"
